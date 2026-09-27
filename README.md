@@ -104,18 +104,3 @@ python -m pip install -r requirements-report.txt
 python -m unittest discover -s tests -v
 python scripts/check_repository.py
 ```
-
-## Ограничения
-
-Кросс-валидация проведена после выбора конфигураций, поэтому её оценка
-может быть оптимистичной. Польза отдельных новых групп признаков требует
-дополнительной проверки. После подготовки публичной версии полный GPU-запуск
-заново не выполнялся; код исходного запуска сохранён в `archive/executed/`.
-
-## Источники
-
-- [NoxMoon — Home Credit Default Risk](https://github.com/NoxMoon/home-credit-default-risk): признаки кредитной истории, выбор моделей и ансамбль.
-- [João Aguiar — Home Credit](https://github.com/js-aguiar/home-credit-default-competition): условия прошлых кредитов, временные окна и LightGBM GOSS.
-- [Open Solution — Home Credit](https://github.com/minerva-ml/open-solution-home-credit): организация экспериментов и сравнение версий решения.
-
-Проект подготовлен с использованием AI-инструментов. Результаты относятся к сохранённым запускам Kaggle.
