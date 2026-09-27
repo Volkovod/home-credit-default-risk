@@ -1,0 +1,38 @@
+[
+  {
+    "model": "xgb_aug_depth7",
+    "reference": "original XGB depth 7",
+    "delta_auc": 0.000185212026970083,
+    "ci95": [
+      -0.0014793714636103321,
+      0.0019293691563918155
+    ]
+  },
+  {
+    "model": "xgb_peer_depth7",
+    "reference": "original XGB depth 7",
+    "delta_auc": -0.0003376609959747645,
+    "ci95": [
+      -0.001893562810555996,
+      0.0014527883555438825
+    ]
+  },
+  {
+    "model": "xgb_peer_depth4",
+    "reference": "original XGB depth 7",
+    "delta_auc": 0.0006178641825967945,
+    "ci95": [
+      -0.0009391332128346724,
+      0.0022640592259902557
+    ]
+  },
+  {
+    "model": "new_selected_blend",
+    "reference": "previous 75/25 blend",
+    "delta_auc": 0.0005620094586490376,
+    "ci95": [
+      -0.0006064299532946516,
+      0.001835014151681591
+    ]
+  }
+]

@@ -1,0 +1,120 @@
+{
+  "candidates": [
+    {
+      "name": "xgb_aug_depth7",
+      "kind": "xgb",
+      "features": "augmented",
+      "params": {
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "tree_method": "hist",
+        "device": "cuda",
+        "enable_categorical": true,
+        "max_depth": 7,
+        "min_child_weight": 50,
+        "learning_rate": 0.03,
+        "subsample": 0.85,
+        "colsample_bytree": 0.85,
+        "reg_alpha": 0.5,
+        "reg_lambda": 15.0,
+        "max_bin": 128,
+        "n_jobs": 4
+      }
+    },
+    {
+      "name": "xgb_peer_depth7",
+      "kind": "xgb",
+      "features": "peer",
+      "params": {
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "tree_method": "hist",
+        "device": "cuda",
+        "enable_categorical": true,
+        "max_depth": 7,
+        "min_child_weight": 50,
+        "learning_rate": 0.03,
+        "subsample": 0.85,
+        "colsample_bytree": 0.85,
+        "reg_alpha": 0.5,
+        "reg_lambda": 15.0,
+        "max_bin": 128,
+        "n_jobs": 4
+      }
+    },
+    {
+      "name": "xgb_peer_depth4",
+      "kind": "xgb",
+      "features": "peer",
+      "params": {
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "tree_method": "hist",
+        "device": "cuda",
+        "enable_categorical": true,
+        "max_depth": 4,
+        "min_child_weight": 30,
+        "learning_rate": 0.035,
+        "subsample": 0.85,
+        "colsample_bytree": 0.5,
+        "reg_alpha": 0.5,
+        "reg_lambda": 15.0,
+        "max_bin": 256,
+        "n_jobs": 4
+      }
+    },
+    {
+      "name": "lgb_peer_goss",
+      "kind": "lgb",
+      "features": "peer",
+      "params": {
+        "objective": "binary",
+        "metric": "auc",
+        "learning_rate": 0.025,
+        "num_leaves": 54,
+        "max_depth": 10,
+        "min_child_samples": 70,
+        "colsample_bytree": 0.5,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "reg_alpha": 0.4,
+        "reg_lambda": 0.5,
+        "verbosity": -1,
+        "importance_type": "gain",
+        "device_type": "gpu",
+        "gpu_use_dp": false,
+        "max_bin": 127,
+        "boosting_type": "goss"
+      }
+    },
+    {
+      "name": "lgb_peer_gbdt",
+      "kind": "lgb",
+      "features": "peer",
+      "params": {
+        "objective": "binary",
+        "metric": "auc",
+        "learning_rate": 0.025,
+        "num_leaves": 47,
+        "max_depth": -1,
+        "min_child_samples": 70,
+        "colsample_bytree": 0.5,
+        "subsample": 0.85,
+        "subsample_freq": 1,
+        "reg_alpha": 0.4,
+        "reg_lambda": 5.0,
+        "verbosity": -1,
+        "importance_type": "gain",
+        "device_type": "gpu",
+        "gpu_use_dp": false,
+        "max_bin": 127
+      }
+    }
+  ],
+  "baseline_auc": 0.7916386766841693,
+  "selection": "One candidate per family; at most two models selected by coarse benchmark blend; 5-fold development CV; freeze weights; evaluate holdout once.",
+  "sources": [
+    "https://github.com/js-aguiar/home-credit-default-competition",
+    "https://github.com/NoxMoon/home-credit-default-risk"
+  ]
+}

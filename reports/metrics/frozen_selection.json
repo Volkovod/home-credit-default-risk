@@ -1,0 +1,57 @@
+{
+  "chosen": {
+    "weights": {
+      "xgb_peer_depth4": 0.75,
+      "cat_gpu_depth6": 0.25
+    },
+    "auc": 0.7982071187219174,
+    "ap": 0.2982287020624439,
+    "logloss": 0.2330541421023271
+  },
+  "comparisons": [
+    {
+      "weights": {
+        "xgb_peer_depth4": 0.75,
+        "cat_gpu_depth6": 0.25
+      },
+      "auc": 0.7982071187219174,
+      "ap": 0.2982287020624439,
+      "logloss": 0.2330541421023271
+    },
+    {
+      "weights": {
+        "xgb_peer_depth4": 0.5,
+        "cat_gpu_depth6": 0.5
+      },
+      "auc": 0.7979340036388508,
+      "ap": 0.29777843734548176,
+      "logloss": 0.23315495305042197
+    },
+    {
+      "weights": {
+        "xgb_peer_depth4": 1.0
+      },
+      "auc": 0.7973663793127824,
+      "ap": 0.2964340045057091,
+      "logloss": 0.23340922182469456
+    },
+    {
+      "weights": {
+        "xgb_peer_depth4": 0.25,
+        "cat_gpu_depth6": 0.75
+      },
+      "auc": 0.7965633372915915,
+      "ap": 0.2952014476240788,
+      "logloss": 0.23369209628360682
+    },
+    {
+      "weights": {
+        "cat_gpu_depth6": 1.0
+      },
+      "auc": 0.7939755454563401,
+      "ap": 0.29067261715512743,
+      "logloss": 0.23468467114817818
+    }
+  ],
+  "note": "Frozen before any holdout target evaluation; OOF scores are conditional on benchmark selection."
+}

@@ -1,0 +1,22 @@
+{
+  "completed_at_utc": "2026-09-27T11:15:33.708289+00:00",
+  "python": "3.13.3",
+  "report_packages": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "nbformat": "5.11.1",
+    "nbclient": "0.11.0",
+    "ipykernel": "7.3.0"
+  },
+  "tests": {
+    "run": 10,
+    "passed": 10,
+    "scope": "payment semantics, fold-local peers, submission contracts"
+  },
+  "artifact_checks": "passed: source hashes, notebook-script parity, notebook schemas, links and bundle hygiene",
+  "research_notebook": "executed successfully: 21 cells",
+  "gpu_training": "completed archived Kaggle version 1; packaged fallback not rerun end-to-end",
+  "github_actions": "workflow prepared; remote run not performed"
+}

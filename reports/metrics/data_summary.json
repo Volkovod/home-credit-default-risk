@@ -1,0 +1,12 @@
+{
+  "train_rows": 307511,
+  "test_rows": 48744,
+  "development_rows": 246009,
+  "holdout_rows": 61502,
+  "benchmark_rows": 49202,
+  "target_positive": 24825,
+  "development_prevalence": 0.08072875382607954,
+  "holdout_prevalence": 0.08072908198107379,
+  "oof_prediction_correlation": 0.9522519099700707,
+  "oof_residual_correlation": 0.9932948032066665
+}

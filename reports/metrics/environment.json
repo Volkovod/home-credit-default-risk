@@ -1,0 +1,14 @@
+{
+  "versions": {
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.6.1",
+    "lightgbm": "4.6.0",
+    "xgboost": "3.2.0",
+    "catboost": "1.2.10"
+  },
+  "gpus": "Tesla T4, 15360 MiB\nTesla T4, 15360 MiB\n",
+  "seed": 42,
+  "cv_folds": 5,
+  "feature_version": "research-v2-20260926"
+}

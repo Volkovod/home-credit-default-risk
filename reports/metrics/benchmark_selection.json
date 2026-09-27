@@ -1,0 +1,266 @@
+{
+  "ranking": [
+    {
+      "name": "xgb_peer_depth4",
+      "kind": "xgb",
+      "features": "peer",
+      "iterations": 1567,
+      "fit_seconds": 147.6251244544983,
+      "total_seconds": 189.17196035385132,
+      "seed": 42,
+      "device": 0,
+      "n_features": 1592,
+      "auc": 0.7922565408667661,
+      "ap": 0.2863745367906473,
+      "logloss": 0.23548793973561502,
+      "reused": false
+    },
+    {
+      "name": "xgb_aug_depth7",
+      "kind": "xgb",
+      "features": "augmented",
+      "iterations": 1071,
+      "fit_seconds": 136.7085428237915,
+      "total_seconds": 142.34024453163147,
+      "seed": 42,
+      "device": 0,
+      "n_features": 1552,
+      "auc": 0.7918238887111394,
+      "ap": 0.2830831039105872,
+      "logloss": 0.2359876175370266,
+      "reused": false
+    },
+    {
+      "name": "xgb_gpu_depth7",
+      "kind": "xgb",
+      "iterations": 934,
+      "fit_seconds": 112.82437038421632,
+      "total_seconds": 116.6740620136261,
+      "seed": 42,
+      "auc": 0.7916386766841693,
+      "ap": 0.2827532248787215,
+      "logloss": 0.236019875022944,
+      "features": "original",
+      "reused": true
+    },
+    {
+      "name": "lgb_peer_gbdt",
+      "kind": "lgb",
+      "features": "peer",
+      "iterations": 803,
+      "fit_seconds": 313.6461110115051,
+      "total_seconds": 358.6485335826874,
+      "seed": 42,
+      "device": 0,
+      "n_features": 1592,
+      "auc": 0.7914925370808127,
+      "ap": 0.2871435821290781,
+      "logloss": 0.23564942456702276,
+      "reused": false
+    },
+    {
+      "name": "xgb_peer_depth7",
+      "kind": "xgb",
+      "features": "peer",
+      "iterations": 895,
+      "fit_seconds": 128.66567063331604,
+      "total_seconds": 170.46387195587158,
+      "seed": 42,
+      "device": 0,
+      "n_features": 1592,
+      "auc": 0.7913010156881946,
+      "ap": 0.2823579154922045,
+      "logloss": 0.23606398262932654,
+      "reused": false
+    },
+    {
+      "name": "lgb_peer_goss",
+      "kind": "lgb",
+      "features": "peer",
+      "iterations": 709,
+      "fit_seconds": 367.3055257797241,
+      "total_seconds": 412.7667963504791,
+      "seed": 42,
+      "device": 0,
+      "n_features": 1592,
+      "auc": 0.7906490748082031,
+      "ap": 0.28317709576885075,
+      "logloss": 0.23613479192079415,
+      "reused": false
+    },
+    {
+      "name": "lgb_gpu_127_slow",
+      "kind": "lgb",
+      "iterations": 1104,
+      "fit_seconds": 157.885085105896,
+      "total_seconds": 162.39786529541016,
+      "seed": 42,
+      "auc": 0.7904724125700598,
+      "ap": 0.2833493513486862,
+      "logloss": 0.2361642241997964,
+      "features": "original",
+      "reused": true
+    },
+    {
+      "name": "cat_gpu_depth6",
+      "kind": "cat",
+      "iterations": 3613,
+      "fit_seconds": 226.99128484725952,
+      "total_seconds": 228.92787218093872,
+      "seed": 42,
+      "auc": 0.7885402215241378,
+      "ap": 0.2771927820941807,
+      "logloss": 0.2371068842471336,
+      "features": "original",
+      "reused": true
+    }
+  ],
+  "comparisons": [
+    {
+      "weights": {
+        "xgb_peer_depth4": 0.75,
+        "cat_gpu_depth6": 0.25
+      },
+      "auc": 0.7930733184469042,
+      "ap": 0.28707884405659,
+      "logloss": 0.23518876241067516
+    },
+    {
+      "weights": {
+        "xgb_peer_depth4": 0.5,
+        "lgb_peer_gbdt": 0.5
+      },
+      "auc": 0.7930303023218689,
+      "ap": 0.28875924717468143,
+      "logloss": 0.23509099818546952
+    },
+    {
+      "weights": {
+        "xgb_peer_depth4": 0.75,
+        "lgb_peer_gbdt": 0.25
+      },
+      "auc": 0.7929292968088137,
+      "ap": 0.2881776058652363,
+      "logloss": 0.23516946553396276
+    },
+    {
+      "weights": {
+        "xgb_peer_depth4": 0.5,
+        "cat_gpu_depth6": 0.5
+      },
+      "auc": 0.7927538201859179,
+      "ap": 0.2856211254931584,
+      "logloss": 0.23536412914412747
+    },
+    {
+      "weights": {
+        "lgb_peer_gbdt": 0.75,
+        "cat_gpu_depth6": 0.25
+      },
+      "auc": 0.7926598782679285,
+      "ap": 0.28780885496167974,
+      "logloss": 0.23524761102371192
+    },
+    {
+      "weights": {
+        "xgb_peer_depth4": 0.25,
+        "lgb_peer_gbdt": 0.75
+      },
+      "auc": 0.7925743692471221,
+      "ap": 0.2886328941305068,
+      "logloss": 0.23524866641088282
+    },
+    {
+      "weights": {
+        "lgb_peer_gbdt": 0.5,
+        "cat_gpu_depth6": 0.5
+      },
+      "auc": 0.7925317984235881,
+      "ap": 0.2860997885393845,
+      "logloss": 0.23536658981649441
+    },
+    {
+      "weights": {
+        "xgb_peer_depth4": 1.0
+      },
+      "auc": 0.7922565408667661,
+      "ap": 0.2863745367906473,
+      "logloss": 0.23548793973561502
+    },
+    {
+      "weights": {
+        "lgb_peer_gbdt": 1.0
+      },
+      "auc": 0.7914925370808127,
+      "ap": 0.2871435821290781,
+      "logloss": 0.23564942456702276
+    },
+    {
+      "weights": {
+        "xgb_peer_depth4": 0.25,
+        "cat_gpu_depth6": 0.75
+      },
+      "auc": 0.7912831841461978,
+      "ap": 0.2822073484054203,
+      "logloss": 0.2359956726311823
+    },
+    {
+      "weights": {
+        "lgb_peer_gbdt": 0.25,
+        "cat_gpu_depth6": 0.75
+      },
+      "auc": 0.7911858134066476,
+      "ap": 0.28276836171725866,
+      "logloss": 0.2359798602839029
+    },
+    {
+      "weights": {
+        "cat_gpu_depth6": 1.0
+      },
+      "auc": 0.7885402215241378,
+      "ap": 0.27719278209418075,
+      "logloss": 0.2371068842471337
+    }
+  ],
+  "selected_specs": [
+    {
+      "name": "xgb_peer_depth4",
+      "kind": "xgb",
+      "features": "peer",
+      "params": {
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "tree_method": "hist",
+        "device": "cuda",
+        "enable_categorical": true,
+        "max_depth": 4,
+        "min_child_weight": 30,
+        "learning_rate": 0.035,
+        "subsample": 0.85,
+        "colsample_bytree": 0.5,
+        "reg_alpha": 0.5,
+        "reg_lambda": 15.0,
+        "max_bin": 256,
+        "n_jobs": 4
+      }
+    },
+    {
+      "name": "cat_gpu_depth6",
+      "kind": "cat",
+      "params": {
+        "loss_function": "Logloss",
+        "eval_metric": "AUC",
+        "depth": 6,
+        "learning_rate": 0.04,
+        "l2_leaf_reg": 6.0,
+        "border_count": 128,
+        "task_type": "GPU",
+        "devices": "0",
+        "boosting_type": "Plain",
+        "thread_count": 4,
+        "allow_writing_files": false
+      },
+      "features": "original"
+    }
+  ]
+}

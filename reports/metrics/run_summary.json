@@ -1,0 +1,252 @@
+{
+  "environment": {
+    "versions": {
+      "numpy": "2.0.2",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.6.1",
+      "lightgbm": "4.6.0",
+      "xgboost": "3.2.0",
+      "catboost": "1.2.10"
+    },
+    "gpus": "Tesla T4, 15360 MiB\nTesla T4, 15360 MiB\n",
+    "seed": 42,
+    "cv_folds": 5,
+    "feature_version": "research-v2-20260926"
+  },
+  "features": 1552,
+  "added_features": 302,
+  "benchmark_ranking": [
+    {
+      "name": "xgb_peer_depth4",
+      "kind": "xgb",
+      "features": "peer",
+      "iterations": 1567,
+      "fit_seconds": 147.6251244544983,
+      "total_seconds": 189.17196035385132,
+      "seed": 42,
+      "device": 0,
+      "n_features": 1592,
+      "auc": 0.7922565408667661,
+      "ap": 0.2863745367906473,
+      "logloss": 0.23548793973561502,
+      "reused": false
+    },
+    {
+      "name": "xgb_aug_depth7",
+      "kind": "xgb",
+      "features": "augmented",
+      "iterations": 1071,
+      "fit_seconds": 136.7085428237915,
+      "total_seconds": 142.34024453163147,
+      "seed": 42,
+      "device": 0,
+      "n_features": 1552,
+      "auc": 0.7918238887111394,
+      "ap": 0.2830831039105872,
+      "logloss": 0.2359876175370266,
+      "reused": false
+    },
+    {
+      "name": "xgb_gpu_depth7",
+      "kind": "xgb",
+      "iterations": 934,
+      "fit_seconds": 112.82437038421632,
+      "total_seconds": 116.6740620136261,
+      "seed": 42,
+      "auc": 0.7916386766841693,
+      "ap": 0.2827532248787215,
+      "logloss": 0.236019875022944,
+      "features": "original",
+      "reused": true
+    },
+    {
+      "name": "lgb_peer_gbdt",
+      "kind": "lgb",
+      "features": "peer",
+      "iterations": 803,
+      "fit_seconds": 313.6461110115051,
+      "total_seconds": 358.6485335826874,
+      "seed": 42,
+      "device": 0,
+      "n_features": 1592,
+      "auc": 0.7914925370808127,
+      "ap": 0.2871435821290781,
+      "logloss": 0.23564942456702276,
+      "reused": false
+    },
+    {
+      "name": "xgb_peer_depth7",
+      "kind": "xgb",
+      "features": "peer",
+      "iterations": 895,
+      "fit_seconds": 128.66567063331604,
+      "total_seconds": 170.46387195587158,
+      "seed": 42,
+      "device": 0,
+      "n_features": 1592,
+      "auc": 0.7913010156881946,
+      "ap": 0.2823579154922045,
+      "logloss": 0.23606398262932654,
+      "reused": false
+    },
+    {
+      "name": "lgb_peer_goss",
+      "kind": "lgb",
+      "features": "peer",
+      "iterations": 709,
+      "fit_seconds": 367.3055257797241,
+      "total_seconds": 412.7667963504791,
+      "seed": 42,
+      "device": 0,
+      "n_features": 1592,
+      "auc": 0.7906490748082031,
+      "ap": 0.28317709576885075,
+      "logloss": 0.23613479192079415,
+      "reused": false
+    },
+    {
+      "name": "lgb_gpu_127_slow",
+      "kind": "lgb",
+      "iterations": 1104,
+      "fit_seconds": 157.885085105896,
+      "total_seconds": 162.39786529541016,
+      "seed": 42,
+      "auc": 0.7904724125700598,
+      "ap": 0.2833493513486862,
+      "logloss": 0.2361642241997964,
+      "features": "original",
+      "reused": true
+    },
+    {
+      "name": "cat_gpu_depth6",
+      "kind": "cat",
+      "iterations": 3613,
+      "fit_seconds": 226.99128484725952,
+      "total_seconds": 228.92787218093872,
+      "seed": 42,
+      "auc": 0.7885402215241378,
+      "ap": 0.2771927820941807,
+      "logloss": 0.2371068842471336,
+      "features": "original",
+      "reused": true
+    }
+  ],
+  "selected_specs": [
+    {
+      "name": "xgb_peer_depth4",
+      "kind": "xgb",
+      "features": "peer",
+      "params": {
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "tree_method": "hist",
+        "device": "cuda",
+        "enable_categorical": true,
+        "max_depth": 4,
+        "min_child_weight": 30,
+        "learning_rate": 0.035,
+        "subsample": 0.85,
+        "colsample_bytree": 0.5,
+        "reg_alpha": 0.5,
+        "reg_lambda": 15.0,
+        "max_bin": 256,
+        "n_jobs": 4
+      }
+    },
+    {
+      "name": "cat_gpu_depth6",
+      "kind": "cat",
+      "params": {
+        "loss_function": "Logloss",
+        "eval_metric": "AUC",
+        "depth": 6,
+        "learning_rate": 0.04,
+        "l2_leaf_reg": 6.0,
+        "border_count": 128,
+        "task_type": "GPU",
+        "devices": "0",
+        "boosting_type": "Plain",
+        "thread_count": 4,
+        "allow_writing_files": false
+      },
+      "features": "original"
+    }
+  ],
+  "weights": {
+    "xgb_peer_depth4": 0.75,
+    "cat_gpu_depth6": 0.25
+  },
+  "oof": {
+    "auc": 0.7982071187219174,
+    "ap": 0.2982287020624439,
+    "logloss": 0.2330541421023271
+  },
+  "holdout": {
+    "auc": 0.7980871423914551,
+    "ap": 0.2942002109148101,
+    "logloss": 0.23347391364134273,
+    "auc_ci95": [
+      0.7918906810414114,
+      0.804416080951969
+    ],
+    "n": 61502,
+    "positives": 4965
+  },
+  "final_fits": {
+    "xgb_peer_depth4": [
+      {
+        "name": "xgb_peer_depth4",
+        "kind": "xgb",
+        "features": "peer",
+        "iterations": 1500,
+        "fit_seconds": 203.8493070602417,
+        "total_seconds": 269.03960847854614,
+        "seed": 42,
+        "device": 0,
+        "n_features": 1592
+      },
+      {
+        "name": "xgb_peer_depth4",
+        "kind": "xgb",
+        "features": "peer",
+        "iterations": 1500,
+        "fit_seconds": 202.87559533119202,
+        "total_seconds": 273.5004770755768,
+        "seed": 142,
+        "device": 0,
+        "n_features": 1592
+      }
+    ],
+    "cat_gpu_depth6": [
+      {
+        "name": "cat_gpu_depth6",
+        "kind": "cat",
+        "features": "original",
+        "iterations": 3284,
+        "fit_seconds": 280.1991810798645,
+        "total_seconds": 284.51822233200073,
+        "seed": 42,
+        "device": 1,
+        "n_features": 1250
+      },
+      {
+        "name": "cat_gpu_depth6",
+        "kind": "cat",
+        "features": "original",
+        "iterations": 3284,
+        "fit_seconds": 275.8561897277832,
+        "total_seconds": 280.3696012496948,
+        "seed": 142,
+        "device": 1,
+        "n_features": 1250
+      }
+    ]
+  },
+  "seconds": 3059.3293013572693,
+  "submission_rows": 48744,
+  "limitations": [
+    "Single development split for hyperparameter selection; OOF is conditional on selection.",
+    "Holdout follows pre-existing split; broader historical use of this dataset cannot be audited.",
+    "This notebook does not submit to the leaderboard."
+  ]
+}

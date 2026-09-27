@@ -1,0 +1,15 @@
+{
+  "competition": "home-credit-default-risk",
+  "submission_ref": 56605291,
+  "filename": "submission.csv",
+  "submitted_at_api": "2026-09-27 09:57:42.437000",
+  "status": "COMPLETE",
+  "public_score": 0.80088,
+  "private_score": 0.79968,
+  "sha256": "7b4108816c61052e3a91c10c95d2af9b2d826f97c4a4d34628165af2591a2cfe",
+  "source": "Authenticated Kaggle CLI: competitions submissions home-credit-default-risk -v",
+  "description": "Final research ensemble: XGBoost 75%, CatBoost 25%; frozen OOF selection; two-seed full refit",
+  "late_submission": true,
+  "rank_claimed": false,
+  "leaderboard_used_for_model_selection": false
+}
