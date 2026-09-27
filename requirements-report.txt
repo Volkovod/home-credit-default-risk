@@ -1,0 +1,7 @@
+# CPU-only report, notebook and verification dependencies.
+numpy>=2,<3
+pandas>=2.3,<4
+scikit-learn>=1.6,<2
+matplotlib>=3.8,<4
+nbformat>=5.10,<6
+

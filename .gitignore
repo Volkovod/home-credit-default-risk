@@ -1,0 +1,32 @@
+# Data and client-level model outputs stay local.
+data/
+artifacts/
+models/
+submissions/
+*.parquet
+*.npz
+*.npy
+*.pkl
+*.pickle
+*.ubj
+*.cbm
+*predictions.csv
+*submission*.csv
+split_manifest.csv
+original_splits*
+# Credentials and local environments
+.env
+.env.*
+kaggle.json
+kaggle-config/
+access_token
+*.pem
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.DS_Store
+*.zip
+

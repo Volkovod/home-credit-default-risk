@@ -1,0 +1,11 @@
+# Core package versions recorded in the successful Kaggle run.
+# Use a Python version with wheels for these versions (e.g. Python 3.11).
+numpy==2.0.2
+pandas==2.3.3
+scikit-learn==1.6.1
+lightgbm==4.6.0
+xgboost==3.2.0
+catboost==1.2.10
+# Parquet backend: additional reproduction dependency, version not logged in run.
+pyarrow>=14,<23
+
